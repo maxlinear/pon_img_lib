@@ -1,9 +1,20 @@
 NEXT VERSION
 
+v3.1.0 2025.04.29
+
+- PONRTSYS-14628: Add PA IF version check
+  + Add a check for the version of the PON adapter interface and return an error
+    if the version of the higher layer module is not supported anymore.
+
+v3.0.0 2024.08.20
+
+- PONRTSYS-14347: License change from MxL to BSD (2-clause)
+- PRPL-800: increase the image-write timeout to 300sec
+
 v2.4.0 2023.09.26
 
 - PONRTSYS-13095: support reboot in prpl
-  + improve the ubus detection to support at least reboot
+  + improve the ubus detection to support reboot
 
 v2.3.2 2023.07.11
 

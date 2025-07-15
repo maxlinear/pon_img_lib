@@ -1,6 +1,6 @@
 /******************************************************************************
  *
- * Copyright (c) 2022 - 2023 MaxLinear, Inc.
+ * Copyright (c) 2022 - 2024 MaxLinear, Inc.
  * Copyright (c) 2018 - 2019 Intel Corporation
  *
  * For licensing information, see the file 'LICENSE' in the root folder of
@@ -155,7 +155,8 @@ enum pon_adapter_errno pon_img_upgrade(struct pon_img_context *ctx,
 
 	err = ctx->pa_config->ubus_call(ctx->hl_handle,
 					ctx->ubus_path, UBUS_METHOD_UPGRADE,
-					req.head, retval_get, &retval, 60000);
+					req.head, retval_get, &retval,
+					UBUS_TIMEOUT_UPGRADE);
 	blob_buf_free(&req);
 	if (err) {
 		dbg_err_fn_ret(ubus_call, err);

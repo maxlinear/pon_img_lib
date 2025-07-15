@@ -1,6 +1,6 @@
 /******************************************************************************
  *
- * Copyright (c) 2022 - 2023 MaxLinear, Inc.
+ * Copyright (c) 2022 - 2024 MaxLinear, Inc.
  * Copyright (c) 2018 Intel Corporation
  *
  * For licensing information, see the file 'LICENSE' in the root folder of
@@ -32,6 +32,11 @@
 #define UBUS_METHOD_SET_UBOOTVAR	"set_uboot_env"
 #define UBUS_METHOD_UPGRADE		"write_img"
 #define UBUS_METHOD_REBOOT		"reboot"
+
+/** Individual timeout for writing the image.
+ *  In a secure environment this can take quite long.
+ */
+#define UBUS_TIMEOUT_UPGRADE 300000
 
 /** default file name for upgrade image file */
 #define SWIMAGE_NAME			"firmware.img"
