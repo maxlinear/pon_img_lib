@@ -1,5 +1,10 @@
 NEXT VERSION
 
+v3.1.1 2025.11.13
+
+- PONRTSYS-14967: remove usage of time_t in reboot callback
+- PONRTSYS-14973: Add codespell config and fix spelling in code
+
 v3.1.0 2025.04.29
 
 - PONRTSYS-14628: Add PA IF version check

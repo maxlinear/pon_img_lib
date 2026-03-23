@@ -1,6 +1,6 @@
 /*****************************************************************************
  *
- * Copyright (c) 2021 - 2023 MaxLinear, Inc.
+ * Copyright (c) 2021 - 2025 MaxLinear, Inc.
  * Copyright (c) 2018 Intel Corporation
  *
  * For licensing information, see the file 'LICENSE' in the root folder of
@@ -116,7 +116,8 @@ static int32_t pon_img_reboot_thread(struct IFXOS_ThreadParams_s *thr_params)
 	return 0;
 }
 
-static enum pon_adapter_errno pon_img_reboot(void *llhandle, time_t timeout_ms)
+static enum pon_adapter_errno pon_img_reboot(void *llhandle,
+					     unsigned long timeout_ms)
 {
 	IFXOS_ThreadCtrl_t *p_thread = &pon_img_reboot_thread_control;
 
